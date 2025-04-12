@@ -10,7 +10,7 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Poppins', sans-serif;
-  background: #fde9f1;
+  background-image: linear-gradient(to right top, #d16ba5, #d379ac, #d587b3, #d795ba, #d9a2c1, #da9fc1, #dc9dc0, #dd9ac0, #de86b7, #df71ae, #df5aa4, #df3d99);
   color: #1E1E1E;
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -72,7 +72,7 @@ body {
 
 .nav-links a:hover {
   background-color: #fFB8E0;
-  color: #2B6CB0;
+  color: white;
 }
 
 .discord-btn {
@@ -215,7 +215,7 @@ body {
 ====================== */
 .about-section {
   padding: 40px;
-  background-color: #fde9f1;
+  background-color: linear-gradient(to right top, #d16ba5, #d379ac, #d587b3, #d795ba, #d9a2c1, #da9fc1, #dc9dc0, #dd9ac0, #de86b7, #df71ae, #df5aa4, #df3d99);
   text-align: center;
 }
 
@@ -224,6 +224,8 @@ body {
   color: black;
   text-shadow: 3px 3px gray;
   margin-bottom: 60px;
+     text-decoration-line: underline;
+
 }
 
 .about-content {
@@ -283,6 +285,8 @@ body {
   color: black;
   text-shadow: 3px 3px gray;
   margin-bottom: 40px;
+     text-decoration-line: underline;
+
 }
 
 .gdg-content {
@@ -361,6 +365,8 @@ body {
   color: black;
   text-shadow: 3px 3px gray;
   margin-bottom: 70px;
+     text-decoration-line: underline;
+
 }
 
 .timeline {
@@ -416,7 +422,7 @@ body {
    Judges Section
 ====================== */
 .judges-section {
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
 }
 
@@ -425,6 +431,7 @@ body {
   color: black;
   margin-bottom: 50px;
   text-shadow: 3px 3px gray;
+   text-decoration-line: underline;
 }
 
 .judges-grid {
@@ -464,6 +471,7 @@ body {
   justify-content: center;
   gap: 6px;
   border-radius: 0 0 10px 10px;
+  text-decoration-line: underline;
 }
 
 .judge-name i {
