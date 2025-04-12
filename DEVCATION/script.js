@@ -69,3 +69,42 @@ if (burger && nav) {
     nav.classList.toggle("active");
   });
 }
+
+// Animate schedule cards on scroll
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('[data-aos]').forEach(item => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      item.style.opacity = 1;
+      item.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+document.querySelectorAll('[data-aos]').forEach(item => {
+  item.style.opacity = 0;
+  item.style.transform = 'translateY(40px)';
+  item.style.transition = 'all 0.6s ease-out';
+});
+// Scroll-triggered reveal for schedule items
+const scheduleItems = document.querySelectorAll('.schedule-item');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, { threshold: 0.2 });
+
+scheduleItems.forEach(item => observer.observe(item));
+document.querySelectorAll('a[href="#schedule"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const section = document.querySelector("#schedule");
+    section.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+
+
