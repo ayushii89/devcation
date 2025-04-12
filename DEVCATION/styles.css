@@ -1,11 +1,21 @@
+/* ======================
+   Global Styles
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif; /* Using the Inter font */
-  background: #F7FAFC; /* Light gray background */
-  color: black; /* Dark gray text */
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: #fde9f1;
+  color: #1E1E1E;
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -14,20 +24,14 @@ body {
   padding: 0 20px;
 }
 
-.section-title {
-  font-size: 2.5em;
-  font-weight: bold;
-  background-color: #F7CFD8; /* Very dark gray */
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* Header Styling */
+/* ======================
+   Header & Navigation
+====================== */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fad3e3; /* White navbar */
+  background-color: #fad3e3;
   padding: 20px 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -48,21 +52,8 @@ body {
 .brand-name {
   font-size: 28px;
   font-weight: 700;
-  color: black; /* A primary brand color */
-}
-.typing-text
-{
   color: black;
-  text-shadow: 3px 3px gray;
-
 }
-.zz
-{
-  color: black;
-  text-shadow: 3px 3px gray;
-
-}
-
 
 .nav-links {
   display: flex;
@@ -80,12 +71,12 @@ body {
 }
 
 .nav-links a:hover {
-  background-color: #fFB8E0; /* Light blue hover */
+  background-color: #fFB8E0;
   color: #2B6CB0;
 }
 
 .discord-btn {
-  background-color: #FFB8E0; /* Discord blue */
+  background-color: #FFB8E0;
   color: white;
   font-weight: 600;
   display: flex;
@@ -106,21 +97,83 @@ body {
   margin-right: 8px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color:#fde9f1;
-  font-family: 'Poppins', sans-serif;
-  color: #1E1E1E;
-  overflow-x: hidden;
+/* ======================
+   Hero Section
+====================== */
+.hero {
   position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  flex-wrap: wrap;
 }
 
-/* BUBBLE BACKGROUND */
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.typing-text,
+.zz {
+  color: black;
+  text-shadow: 3px 3px gray;
+}
+
+.typing-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.btn-register {
+  background-color: #F7CFD8;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 20px 0;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.btn-register:hover {
+  background-color: #f494c5;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 1.4rem;
+  color: #3A3A3A;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFB8E0;
+}
+
+.hero-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================
+   Bubble Background
+====================== */
 .bubbles {
   position: absolute;
   top: 0;
@@ -152,97 +205,61 @@ body {
 .bubbles span:nth-child(7) { left: 90%; width: 40px; height: 40px; animation-delay: 7s; }
 
 @keyframes animate {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateY(-1000px) scale(1.5);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) scale(1); opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(-1000px) scale(1.5); opacity: 0; }
 }
 
-.hero {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 10%;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.typing-text::after {
-  content: '|';
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.btn-register {
-  background-color:#F7CFD8 ;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
-  display: inline-block;
-  margin: 20px 0;
-}
-
-.btn-register:hover {
-  background-color: #f494c5;
-}
-
-.social-icons a {
-  margin: 0 12px 0 0;
-  font-size: 1.4rem;
-  color: #3A3A3A;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #FFB8E0;
-}
-
-.hero-image img {
-  max-width: 400px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
+/* ======================
+   About Section
+====================== */
 .about-section {
-  padding: 30px 10px;
-  background: #d10c5b;
-  color: black;
+  padding: 40px;
+  background-color: #fde9f1;
   text-align: center;
 }
 
+.about-heading {
+  font-size: 3rem;
+  color: black;
+  text-shadow: 3px 3px gray;
+  margin-bottom: 60px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-img img {
+  width: 400px;
+  max-width: 90vw;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(192, 107, 21, 0.3);
+}
+
+.about-text-box {
+  background-color: #F8C8DC;
+  border: 2px solid #d10658;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  color: black;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  box-shadow: 0 0 20px rgba(189, 14, 38, 0.2);
+}
+
+/* Stats Bar */
 .stats-bar {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  background:#a50a4b ;
+  background: #a50a4b;
   padding: 10px 30px;
   border-radius: 30px;
   margin-bottom: 40px;
@@ -256,62 +273,10 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(5px);
 }
-.about-section {
-  padding: 40px 40px;
-  background-color: #fde9f1 ; /* matches your deep blue vibe */
-}
 
-.about-heading {
-  font-size: 3rem;
-  text-align: center;
-  color: BLACK;
-  margin-bottom: 60px;
-  font-family: 'Inter', sans-serif;
-    text-shadow: 3px 3px gray;
-
-
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  font-family: 'Inter', sans-serif
-}
-
-.about-img img {
-  width: 400px;
-  max-width: 90vw;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(192, 107, 21, 0.3);
-}
-
-.about-text-box {
-  background-color:#F8C8DC;
-  border: 2px solid #d10658;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 600px;
-  color: black;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  box-shadow: 0 0 20px rgba(189, 14, 38, 0.2);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #fde9f1;
-  color: #c3f3ff;
-  padding: 40px 20px;
-}
-
+/* ======================
+   GDG Section
+====================== */
 .gdg-title {
   font-size: 3rem;
   text-align: center;
@@ -330,7 +295,6 @@ body {
   justify-content: center;
 }
 
-/* Left side - terminal box */
 .gdg-terminal {
   background-color: #efb068;
   border: 2px solid #e0a210;
@@ -362,11 +326,10 @@ body {
 .terminal-body p {
   margin: 10px 0;
   font-size: 0.95rem;
+  color: black;
   line-height: 1.6;
-  color: black ;
 }
 
-/* Right side - image grid */
 .gdg-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -376,7 +339,6 @@ body {
 
 .gdg-gallery img {
   width: 100%;
-  height: auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(28, 120, 120, 0.2);
   transition: transform 0.3s;
@@ -386,8 +348,9 @@ body {
   transform: scale(1.05);
 }
 
-
-/* Timeline section styling */
+/* ======================
+   Timeline Section
+====================== */
 .tracks-section {
   padding: 60px 20px;
 }
@@ -396,14 +359,10 @@ body {
   font-size: 3.5rem;
   text-align: center;
   color: black;
+  text-shadow: 3px 3px gray;
   margin-bottom: 70px;
-      text-shadow: 3px 3px gray;
-
-
-  
 }
 
-/* Timeline container */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -412,14 +371,12 @@ body {
   padding-left: 40px;
 }
 
-/* Timeline item */
 .timeline-item {
   position: relative;
   margin-bottom: 60px;
   padding-left: 20px;
 }
 
-/* Icon (glowing circle with emoji/icon) */
 .timeline-icon {
   position: absolute;
   left: -33px;
@@ -437,7 +394,6 @@ body {
   box-shadow: 0 0 15px #dce069b0;
 }
 
-/* Content box */
 .timeline-content {
   background: #efb068;
   padding: 20px 25px;
@@ -450,20 +406,15 @@ body {
   transform: translateY(-5px);
 }
 
-.timeline-content h2 {
+.timeline-content h2,
+.timeline-content p {
   color: black;
-  font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
-.timeline-content p {
-  color: black;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-
-/* Judges section */
+/* ======================
+   Judges Section
+====================== */
 .judges-section {
   padding: 40px 20px;
   text-align: center;
@@ -474,10 +425,8 @@ body {
   color: black;
   margin-bottom: 50px;
   text-shadow: 3px 3px gray;
-
 }
 
-/* Judges container */
 .judges-grid {
   display: flex;
   justify-content: center;
@@ -485,10 +434,9 @@ body {
   gap: 40px;
 }
 
-/* Judge card */
 .judge-card {
   background-color: transparent;
-  border-radius : 20px;
+  border-radius: 20px;
   overflow: hidden;
   max-width: 280px;
   text-shadow: 3px 3px gray;
@@ -499,17 +447,13 @@ body {
   transform: scale(1.03);
 }
 
-/* Judge image */
 .judge-img {
   width: 100%;
   height: auto;
   display: block;
-    border-radius : 20px;
-
-
+  border-radius: 20px;
 }
 
-/* LinkedIn name badge */
 .judge-name {
   color: #021b36;
   font-weight: bold;
@@ -519,12 +463,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 .judge-name i {
   color: #0077b5;
   font-size: 1.2rem;
 }
-
