@@ -157,3 +157,26 @@ function submitFeedback() {
     modal.classList.remove('show');
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const photoGrid = document.getElementById("photoGrid");
+
+  photoGrid.addEventListener("click", function (e) {
+    if (e.target.tagName === "IMG") {
+      const imgSrc = e.target.src;
+      const overlay = document.createElement("div");
+      overlay.classList.add("lightbox-overlay");
+      overlay.innerHTML = `
+        <div class="lightbox-content">
+          <img src="${imgSrc}" alt="Expanded Photo" />
+        </div>
+      `;
+      document.body.appendChild(overlay);
+
+      overlay.addEventListener("click", function () {
+        overlay.remove();
+      });
+    }
+  });
+});

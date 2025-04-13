@@ -33,7 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #fad3e3;
-  padding: 20px 30px;
+  padding: 5px 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -338,21 +338,102 @@ body {
 .gdg-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 10px;
   max-width: 500px;
 }
 
 .gdg-gallery img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(28, 120, 120, 0.2);
   transition: transform 0.3s;
 }
 
 .gdg-gallery img:hover {
   transform: scale(1.05);
+    Box-shadow: 0 12px 25px rgba(223, 27, 135, 0.763);
+
 }
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.photo-wall-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  color: black;
+}
+
+
+
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 0px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(223, 27, 135, 0.763);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 25, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: zoom-out;
+}
+
+.lightbox-content img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 0 40px #00f7ff88;
+  animation: fadeZoom 0.3s ease;
+}
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 
 
