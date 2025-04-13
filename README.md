@@ -6,7 +6,7 @@ Welcome to the official website of **Devcation '25**, a vibrant and futuristic h
 
 ## 🚀 Live Preview
 
-👉#https://vercel.com/ayushees-projects-8bda7f17/devcation  
+👉#https://devcation-ayushees-projects-8bda7f17.vercel.app/
 🔗 Replace with your deployed link
 
 ---
