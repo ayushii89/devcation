@@ -353,6 +353,21 @@ body {
   transform: scale(1.05);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================
    Timeline Section
 ====================== */
@@ -1077,8 +1092,87 @@ body {
 }
 
 
+.feedback-wall {
+  padding: 20px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.feedback-wall h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: black;
+    text-shadow: 3px 3px gray;
+    text-decoration-line: underline;
 
 
+}
+
+.feedback-wall .subtext {
+  color: black;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feedback-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.feedback-card h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #000;
+  
+
+
+}
+
+.feedback-card .time {
+  font-size: 0.85rem;
+  color: black;
+  margin-bottom: 8px;
+
+}
+
+.stars {
+  color: #fbbf24;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.message {
+  font-size: 0.95rem;
+    color: black;
+
+}
+.see-more {
+  color: #6366f1;
+  cursor: pointer;
+}
 
 
 .footer {

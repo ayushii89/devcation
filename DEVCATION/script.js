@@ -121,3 +121,39 @@ document.querySelectorAll('a[href="#schedule"]').forEach((link) => {
       faqItem.classList.toggle("open");
     });
   });
+const container = document.querySelector('.bubble-container');
+const modal = document.getElementById('feedbackModal');
+const feedbackInput = document.getElementById('feedbackText');
+
+// Create random bubbles
+function createBubble() {
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble');
+  const size = Math.random() * 30 + 30;
+  bubble.style.width = bubble.style.height = `${size}px`;
+  bubble.style.left = `${Math.random() * 100}%`;
+  bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
+
+  bubble.onclick = () => {
+    modal.classList.add('show');
+    bubble.remove();
+  };
+
+  container.appendChild(bubble);
+
+  // Remove bubble after float
+  setTimeout(() => bubble.remove(), 15000);
+}
+
+// Add a new bubble every second
+setInterval(createBubble, 1000);
+
+// Handle submission
+function submitFeedback() {
+  const message = feedbackInput.value.trim();
+  if (message) {
+    alert("🎉 Thanks for the feedback!\n\n" + message);
+    feedbackInput.value = '';
+    modal.classList.remove('show');
+  }
+}
