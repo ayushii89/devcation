@@ -1,4 +1,11 @@
 // Smooth scroll for nav links
+
+
+
+
+
+
+
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", function (e) {
     const target = document.querySelector(this.getAttribute("href"));
@@ -108,3 +115,9 @@ document.querySelectorAll('a[href="#schedule"]').forEach((link) => {
 
 
 
+  document.querySelectorAll(".faq-question").forEach(button => {
+    button.addEventListener("click", () => {
+      const faqItem = button.parentElement;
+      faqItem.classList.toggle("open");
+    });
+  });
