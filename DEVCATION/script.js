@@ -77,7 +77,7 @@ if (burger && nav) {
   });
 }
 
-// Animate schedule cards on scroll
+// Scroll-triggered reveal for schedule items
 const scheduleItems = document.querySelectorAll('.schedule-item');
 const inViewItems = document.querySelectorAll('.in-view');
 Array.from(inViewItems).forEach(function(element) {
@@ -88,7 +88,6 @@ Array.from(inViewItems).forEach(function(element) {
 });
 
 
-// Scroll-triggered reveal for schedule items
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
