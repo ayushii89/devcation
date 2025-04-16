@@ -7,7 +7,7 @@ Welcome to the official website of **Devcation '25**, a vibrant and futuristic h
 ## 🚀 Live Preview
 
 👉#https://devcation-ayushees-projects-8bda7f17.vercel.app/
-🔗 Replace with your deployed link
+
 
 ---
 
@@ -22,7 +22,7 @@ Welcome to the official website of **Devcation '25**, a vibrant and futuristic h
 - **Judges** – Sleek profile section  
 - **Prizes** – Interactive hover/flip cards  
 - **USP Section** – Animated, glowy highlights of what makes us special  
-- **Footer** – Contact + "Built With Love 💖 by XYZ"
+- **Footer** – Contact + "Built With Love 💖 by Ayushee"
 
 ---
 
